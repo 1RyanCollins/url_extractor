@@ -1,18 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "ChatGPT Delta URL Extractor",
+  "name": "ChatGPT WebSocket URL Extractor",
   "version": "1.0",
-  "description": "Extracts URLs from ChatGPT delta responses and displays them in a popup.",
+  "description": "Extract URLs from ChatGPT WebSocket delta messages in real-time.",
   "permissions": ["activeTab", "scripting", "storage"],
   "action": {
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "matches": ["https://chat.openai.com/*"],
+      "matches": ["https://chat.openai.com/c/*"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
   ]
 }
+
 
